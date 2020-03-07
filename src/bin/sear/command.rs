@@ -44,8 +44,16 @@ pub struct SearCmd {
     pub preserve_permissions: bool,
 
     /// Verbose mode
+    #[options(short = "h")]
+    pub help: bool,
+
+    /// Verbose mode
     #[options(short = "v")]
     pub verbose: bool,
+
+    /// Display version
+    #[options(short = "V")]
+    pub version: bool,
 
     /// Files to include in the archive
     #[options(free)]
